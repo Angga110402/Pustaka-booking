@@ -2,10 +2,10 @@
  class Admin extends CI_Controller
 {     public function __construct()
     {         parent::__construct();         cek_login();
-	}      public function index()
-	{
+	    }      public function index()
+	    {
 		$data['judul'] = 'Dashboard';
-		$data['user'] = $this->ModelUser-User->cekData(['email' => $this-
+		$data['user'] = $this->ModelUser->cekData(['email' => $this-
 >session->userdata('email')])->row_array()-
 $data['anggota'] = $this->ModelUser->getUserLimit()-
 >result_array();
